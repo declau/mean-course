@@ -8,8 +8,6 @@ mongoose.set('useCreateIndex', true);
 const Post = require('./models/post');
 
 
-//Mongo user: denis security: xCaENzvEUcjmDQ2m 
-
 const app = express();
 
 mongoose.connect("mongodb+srv://user:<password>@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
