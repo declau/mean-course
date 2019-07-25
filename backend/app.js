@@ -8,11 +8,11 @@ mongoose.set('useCreateIndex', true);
 const Post = require('./models/post');
 
 
-
+//Mongo user: denis security: X4546ZR0G0jzzE9b 
 
 const app = express();
 
-mongoose.connect("mongodb+srv://denis:<password>@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://denis:X4546ZR0G0jzzE9b@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
     .then(() => {
         console.log("Connected to Database....");
     }).catch(() => {
