@@ -8,11 +8,11 @@ mongoose.set('useCreateIndex', true);
 const Post = require('./models/post');
 
 
-//Mongo user: denis security: X4546ZR0G0jzzE9b 
+
 
 const app = express();
 
-mongoose.connect("mongodb+srv://denis:X4546ZR0G0jzzE9b@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://denis:<password>@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
     .then(() => {
         console.log("Connected to Database....");
     }).catch(() => {
@@ -53,6 +53,15 @@ app.get('/api/posts', (req, res, next) => {
         });
     });
 
+});
+
+app.delete('/api/posts/:id', (req, res, next) => {
+    Post.deleteOne({ _id: req.params.id }).then(result => {
+        console.log(result);
+        res.status(200).json({
+            message: 'Post deleted!'
+        });
+    });
 });
 
 module.exports = app;
