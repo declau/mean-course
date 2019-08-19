@@ -9,7 +9,6 @@ const postsRouter = require("./routes/posts");
 
 
 
-
 const app = express();
 
 mongoose.connect("mongodb+srv://denis:<password>@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
