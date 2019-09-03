@@ -11,7 +11,7 @@ const postsRouter = require("./routes/posts");
 
 const app = express();
 
-mongoose.connect("mongodb+srv://denis:<password>@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://denis:URU9FXAMp2p5oCbn@cluster0-isiev.mongodb.net/node-angular?retryWrites=true&w=majority")
     .then(() => {
         console.log("Connected to Database....");
     }).catch(() => {
